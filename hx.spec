@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	%{name}-%{version}.tar.bz2
+# Source0-md5:	371c11d782a675ee5af8cc5dfbd76a92
 #Source0:	http://hx.fortyoz.org/%{name}-%{version}.tar.gz
 Source1:	%{name}.1.pl
 URL:		http://hx.fortyoz.org/
