@@ -35,14 +35,12 @@ install hx $RPM_BUILD_ROOT%{_bindir}
 install hx.1 $RPM_BUILD_ROOT%{_mandir}/man1
 install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/pl/man1
 
-gzip -9nf CHANGES FAQ README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc CHANGES.gz FAQ.gz README.gz
+%doc CHANGES FAQ README
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
