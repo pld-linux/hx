@@ -2,11 +2,12 @@ Summary:	HotlineX (hx) client
 Summary(pl):	Klient HotlineX (hx)
 Name:		hx
 Version:	0.7.14
-Release:	2
+Release:	3
 License:	GPL
 Group:		Networking/Utilities
 Source0:	%{name}-%{version}.tar.bz2
 #Source0:	http://hx.fortyoz.org/%{name}-%{version}.tar.gz
+Source1:	%{name}.1.pl
 URL:		http://hx.fortyoz.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,9 +30,10 @@ LDFLAGS="%{rpmldflags}" \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/{man1,pl/man1}}
 install hx $RPM_BUILD_ROOT%{_bindir}
 install hx.1 $RPM_BUILD_ROOT%{_mandir}/man1
+install %{SOURCE1} $RPM_BUILD_ROOT%{_mandir}/pl/man1
 
 gzip -9nf CHANGES FAQ README
 
@@ -43,3 +45,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGES.gz FAQ.gz README.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
+%lang(pl) %{_mandir}/pl/man1/*
