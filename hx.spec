@@ -1,16 +1,15 @@
-%define name hx
-
 Summary:	HotlineX (hx) client
 Summary(pl):	HotlineX (hx) Klient hotline
-Name:		%{name}
+Name:		hx
 Version:	0.7.14
 Release:	1
-Source0:	%{name}-%{version}.tar.bz2
-URL:		http://krazynet.com/hx/
 License:	GPL
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
+Source0:	%{name}-%{version}.tar.bz2
+#Source0:	http://hx.fortyoz.org/%{name}-%{version}.tar.gz
+URL:		http://hx.fortyoz.org/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -18,8 +17,8 @@ HotlineX (hx) is an implementation of the Hotline protocol for un*x
 based systems.
 
 %description(pl)
-jest to pakiet pozwalajacy na korzystanie z zasobow hotline pod
-systemami z X w nazwie BSD tez siê licz¹.
+Jest to pakiet pozwalaj±cy na korzystanie z zasobów hotline pod
+systemami z X w nazwie, BSD te¿ siê licz±.
 
 %prep
 rm -rf $RPM_BUILD_ROOT
@@ -38,7 +37,6 @@ install -m755 -d $RPM_BUILD_ROOT%{_datadir}/{bin,man/man1}
 install -m 755 -d $RPM_BUILD_ROOT%{_bindir}/
 install -m 755 hx $RPM_BUILD_ROOT%{_bindir}/
 install hx.1 $RPM_BUILD_ROOT%{_mandir}/man1/
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
