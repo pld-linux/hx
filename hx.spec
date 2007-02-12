@@ -1,5 +1,5 @@
 Summary:	HotlineX (hx) client
-Summary(pl):	Klient HotlineX (hx)
+Summary(pl.UTF-8):   Klient HotlineX (hx)
 Name:		hx
 Version:	0.7.14
 Release:	3
@@ -16,9 +16,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 HotlineX (hx) is an implementation of the Hotline protocol for un*x
 based systems.
 
-%description -l pl
-Jest to pakiet pozwalaj±cy na korzystanie z zasobów hotline pod
-systemami z X w nazwie, BSD te¿ siê licz±.
+%description -l pl.UTF-8
+Jest to pakiet pozwalajÄ…cy na korzystanie z zasobÃ³w hotline pod
+systemami z X w nazwie, BSD teÅ¼ siÄ™ liczÄ….
 
 %prep
 %setup -q -n %{name}
