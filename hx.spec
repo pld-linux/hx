@@ -1,5 +1,5 @@
 Summary:	HotlineX (hx) client
-Summary(pl.UTF-8):   Klient HotlineX (hx)
+Summary(pl.UTF-8):	Klient HotlineX (hx)
 Name:		hx
 Version:	0.7.14
 Release:	3
